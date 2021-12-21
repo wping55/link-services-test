@@ -46,6 +46,8 @@ body{
 			i {
 				font-size: 22px;
 				color: $grey-dark;
+				position: relative;
+				top: -4px;	
 			}
 		}
 	}
@@ -270,10 +272,9 @@ body{
 				font-size: 18px;
 			}
 			.shield-icon{
-
 				i{
-				font-size: 16px;
-			
+					font-size: 16px;
+					top: -2px;	
 				}
 			}
 		}
