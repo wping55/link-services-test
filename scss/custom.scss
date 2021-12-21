@@ -1,0 +1,314 @@
+$white: #fff;
+$red: #f66763;
+$grey-dark: #64696d;
+$grey-medium: #c9cfd4;
+$grey-light: #f2f2f2;
+$blue-dark: #2d628c;
+$blue-light: #28719e;
+$status-color: #f2f2f2;
+
+body{
+	font-family: 'Noto Sans SC', sans-serif;
+}
+.container-fluid {
+	margin-bottom: 60px;
+}
+
+.banner {
+	img {
+		display: block;
+		width: 100%;
+		max-height: 500px;
+		object-fit: cover;
+		object-position: center;
+	}
+	.notification-wrapper {
+		left: 20px;
+		right: 20px;
+	}
+	.notification {
+		background-color: $white;
+		a#bluetooth-share {
+			text-decoration: none;
+			.bluetooth-icon {
+				position: relative;
+				top: 5px;
+				color: $blue-dark;
+				&:hover,
+				&:active {
+					color: $blue-light;
+				}
+			}
+		}
+		.shield-icon {
+			position: absolute;
+			right: 1rem;
+			i {
+				font-size: 22px;
+				color: $grey-dark;
+			}
+		}
+	}
+}
+
+.content {
+	padding: 30px 20px;
+	.title {
+		position: relative;
+		margin-bottom: 20px;
+	}
+}
+
+.content.header-line {
+	border-top: 1px solid $grey-light;
+}
+
+.status {
+	.title {
+		#refresh-status {
+			text-decoration: none;
+			color: $grey-dark;
+			&:hover,
+			&:active {
+				color: $grey-light;
+			}
+			.material-icons {
+				position: absolute;
+				right: 0px;
+				top: 0px;
+			}
+		}
+	}
+	.status-col {
+		background-color: $status-color;
+		height: 180px;
+		position: relative;
+		.sub-title {
+			font-weight: bold;
+			padding: 10px 0px;
+			font-size: 14px;
+		}
+		.icon {
+			position: absolute;
+			bottom: 20px;
+			left: 0;
+			right: 0;
+			p {
+				background-color: $white;
+				height: 80px;
+				width: 80px;
+				margin: auto;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				img.syringe {
+					height: 50px;
+					width: 50px;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+					left: 0;
+					right: 0;
+				}
+			}
+			span.material-icons {
+				color: $status-color;
+				font-size: 55px;
+			}
+		}
+	}
+}
+
+.entry {
+	.title {
+		i.bi-door-open-fill {
+			position: relative;
+			top: -3px;
+			color: $red;
+		}
+	}
+	.tab {
+		border-radius: 5px;
+		box-shadow: 0px 0px 5px 0px $grey-medium;
+		.nav {
+			.nav-item {
+				.icon {
+					background: $white;
+					border-radius: 50%;
+					width: 80px;
+					height: 80px;
+					margin: auto;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin-bottom: 10px;
+					margin-top: 20px;
+					.material-icons {
+						font-size: 60px;
+					}
+				}
+				.nav-link {
+					background: #e9f3fc;
+					text-decoration: none;
+					border: 0px;
+					height: 100%;
+					.text {
+						color: #000;
+						font-weight: bold;
+						font-size:14px;
+					}
+				}
+				.nav-link.active {
+					background: #f4f9fd;
+					.text {
+						color: $grey-dark;
+					}
+				}
+				#qr-tab {
+					.material-icons {
+						color: $grey-medium;
+					}
+				}
+				#fav-tab {
+					.material-icons {
+						color: #fcd462;
+					}
+				}
+				#group-tab {
+					.material-icons {
+						color: #f86a69;
+					}
+				}
+			}
+		}
+		.nav-tabs{
+			border:0px;
+		}
+		.tab-content {
+			padding: 20px;
+			#qr {
+				.last-entry {
+					color: $grey-dark;
+				}
+				.last-entry-location {
+					font-weight: bold;
+				}
+				a.check {
+					color: $blue-light;
+					text-decoration: underline;
+					&:hover,
+					&:active {
+						color: $blue-dark;
+					}
+				}
+				.checkout-wrapper {
+					display: flex;
+					a.checkout {
+						border: 1px solid $blue-light;
+						border-radius: 5px;
+						text-decoration: none;
+						display: block;
+						width: 100%;
+						padding: 10px;
+						text-align: center;
+						margin: auto;
+						&:hover,
+						&:active {
+							color: $blue-dark;
+						}
+					}
+					.checkout-text {
+						text-align: center;
+						margin: auto;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	border-top: 1px solid $grey-medium;
+	background-color: $grey-light;
+	height: 60px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	padding: 10px;
+	.footer-link {
+		text-decoration: none;
+		color: $grey-dark;
+		&:hover,
+		&:active {
+			color: $red;
+		}
+		p.icon {
+			margin-bottom: 0px;
+			line-height: 10px;
+		}
+		.text {
+			font-size: 12px;
+		}
+	}
+	.footer-link.active {
+		color: $red;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+
+	.banner{
+		.notification{
+		font-size: 14px;
+			.bluetooth-icon{
+				font-size: 18px;
+			}
+			.shield-icon{
+
+				i{
+				font-size: 16px;
+			
+				}
+			}
+		}
+	}
+	.status {
+		.status-col {
+			height: 120px;
+			.icon {
+				p {
+					height: 40px;
+					width: 40px;
+					img.syringe {
+						height: 25px;
+						width: 25px;
+					}
+				}
+				span.material-icons {
+					font-size: 30px;
+				}
+			}
+		}
+	}
+	.entry {
+		.tab {
+			.nav {
+				.nav-item {
+					.icon {
+						height: 50px;
+						width: 50px;
+						.material-icons {
+							font-size: 40px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

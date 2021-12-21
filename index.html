@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css" />
+    <!-- font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>Static Webpage</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+
+      <section class="header">
+        <div class="row">
+          <div class="p-0 banner position-relative w-100">
+            <img src="img/banner.png" alt="banner" />
+            <div class="notification-wrapper position-absolute border rounded top-0 mt-3">
+              <div class="notification">
+                <div class="w-100 px-3 py-2">
+                  <a href="#" title="bluetooth" id="bluetooth-share">
+                    <span class="material-icons bluetooth-icon">bluetooth</span>
+                  </a>
+                  <span>今天共有126次信息交换</span>
+                  <span class="shield-icon">
+                    <i class="bi bi-shield-exclamation"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content status">
+        <h5 class="title"> 冠病相关健康状态 <a href="#" title="refresh status" id="refresh-status">
+            <span class="material-icons">cached</span>
+          </a>
+        </h5>
+        <div class="row">
+          <div class="col-6">
+            <div class="col-12 rounded status-col text-center ">
+              <p class="sub-title">Not vaccinated</p>
+              <div class="icon">
+                <p class="rounded-circle">
+                  <img src="img/syringe.svg" class="syringe" />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="col-12 rounded status-col">
+              <p class="text-center sub-title">No test status</p>
+              <div class="icon">
+                <p class="rounded-circle">
+                  <span class="material-icons">text_snippet</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content  header-line  entry">
+        <h5 class="title">
+          <i class="bi bi-door-open-fill"></i> SafeEntry 登入
+        </h5>
+        <div class='tab'>
+          <ul class="nav nav-tabs nav-justified  " role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="qr-tab" data-bs-toggle="tab" data-bs-target="#qr" type="button" role="tab" aria-controls="qr" aria-selected="true">
+                <p class='icon'>
+                  <span class="material-icons"> qr_code_scanner </span>
+                </p>
+                <span class="text">扫描 QR 码</span>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="fav-tab" data-bs-toggle="tab" data-bs-target="#fav" type="button" role="tab" aria-controls="fav" aria-selected="false">
+                <p class='icon'>
+                  <span class="material-icons"> star_rate </span>
+                </p>
+                <span class="text">我的最爱</span>
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="group-tab" data-bs-toggle="tab" data-bs-target="#group" type="button" role="tab" aria-controls="group" aria-selected="false">
+                <p class='icon'>
+                  <span class="material-icons"> groups </span>
+                </p>
+                <span class="text">组别</span>
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="qr" role="tabpanel" aria-labelledby="qr-tab">
+              <div class="row">
+                <div class="col-7 p-0">
+                  <p class="last-entry">最后登记入场的QR码</p>
+                  <p class="last-entry-location">GIANT PAYA LEBAR SQ</p>
+                  <a href="#" title="查看通行证" class="check">查看通行证</a>
+                </div>
+                <div class="col-5 p-0 checkout-wrapper">
+                  <a href="#" title="离场" class="checkout" id="checkout">离场</a>
+                  <span class='checkout-text' style="display: none"> 离场</span>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="fav" role="tabpanel" aria-labelledby="fav-tab">我的最爱</div>
+            <div class="tab-pane fade" id="group" role="tabpanel" aria-labelledby="group-tab">组别</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="footer">
+      <div class="row">
+        <div class=col-3>
+          <a href="#" class="footer-link active">
+            <p class="icon">
+              <span class="material-icons"> home </span>
+              <p class="text">首页</p>
+          </a>
+        </div>
+        <div class=col-3>
+          <a href="#" class="footer-link">
+            <p class="icon">
+              <span class="material-icons"> history </span>
+            </p>
+            <p class="text">历史记录</p>
+          </a>
+        </div>
+        <div class=col-3>
+          <a href="#" class="footer-link">
+            <p class="icon">
+              <span class="material-icons"> upload </span>
+            </p>
+            <p class="text">上载</p>
+          </a>
+        </div>
+        <div class=col-3>
+          <a href="#" class="footer-link">
+            <p class="icon">
+              <span class="material-icons"> menu </span>
+            </p>
+            <p class="text">更多</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+  </body>
+</html>
