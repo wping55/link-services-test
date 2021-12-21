@@ -30,7 +30,9 @@ body {
     right: 1rem; }
     .banner .notification .shield-icon i {
       font-size: 22px;
-      color: #64696d; }
+      color: #64696d;
+      position: relative;
+      top: -4px; }
 
 .content {
   padding: 30px 20px; }
@@ -187,7 +189,8 @@ body {
     .banner .notification .bluetooth-icon {
       font-size: 18px; }
     .banner .notification .shield-icon i {
-      font-size: 16px; }
+      font-size: 16px;
+      top: -2px; }
   .status .status-col {
     height: 120px; }
     .status .status-col .icon p {
